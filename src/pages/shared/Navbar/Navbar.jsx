@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const navOptions = <>
-    <li><Link to="/">Home</Link></li>
-    <li><Link to="/login">Login</Link></li>
-    <li><Link to="/register">Register</Link></li>
-</>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/register">Register</Link></li>
+    </>
     return (
         <div>
-            <div className="navbar bg-[#DC1195] text-white">
+            <div className="navbar bg-[#DC1195] text-white rounded-br-xl">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,11 +31,12 @@ const Navbar = () => {
                             {navOptions}
                         </ul>
                     </div>
-                   <div className="">
-                    <button className="btn btn-ghost text-xl">DigiWallet<img className="w-10 h-10" src="https://cdn-icons-png.flaticon.com/128/10017/10017650.png" alt="" /></button>
-                    
-                   {/* <a className="btn btn-ghost text-xl">DigiWallet</a> */}
-                   </div>
+                    <div className="">
+                        <Link to={"/"}>
+                            <button className="btn btn-ghost text-xl">DigiWallet<img className="w-10 h-10" src="https://cdn-icons-png.flaticon.com/128/10017/10017650.png" alt="" /></button>
+                        </Link>
+
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -43,7 +44,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn bg-[#DC1195] text-white border-none">Button</a>
+                    <a className="btn bg-[#DC1195] text-white border-none">Log Out</a>
                 </div>
             </div>
         </div>
